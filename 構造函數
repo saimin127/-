@@ -1,0 +1,17 @@
+這種建構方式可以保證所有物件都有name這個屬性，也避免出現bug。
+
+//構造函數 fuction
+function creatCard(initName) {
+    this.name = initName;
+}
+//New 建立或構造
+const a1 = new creatCard("aa");
+const a2 = new creatCard("ab");
+const a3 = new creatCard("ac");
+const a4 = new creatCard("ad");
+const a5 = new creatCard("ae");
+console.log(a1);
+console.log(a2);
+console.log(a3);
+console.log(a4);
+console.log(a5);
