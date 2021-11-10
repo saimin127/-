@@ -1,0 +1,38 @@
+回傳值得fuction
+function addMoney(price1, price2, discount) {
+    let result = price1 + price2 - discount;
+    let message = "普通會員";
+    if (result >= 50000) {
+        message = "白金會員";
+        return message;
+    }
+
+    if (result >= 20000) {
+        message = "黃金會員";
+        return message;
+    }
+
+    return message;
+}
+let msg = addMoney(10000, 15000, 1000);
+console.log(msg);
+
+
+原本設定為(下)時，程式碼執行會先讀到白金會員，但在下一行會再次被黃金會員蓋掉，
+所以先用return來將這行的確定訊息傳出，就可以避免被蓋過。
+
+function addMoney(price1, price2, discount) {
+    let result = price1 + price2 - discount;
+    let message = "普通會員";
+    if (result >= 50000) {
+        message = "白金會員";
+        
+    }
+
+    if (result >= 20000) {
+        message = "黃金會員";
+        
+    }
+
+    return message;
+}
