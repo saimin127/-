@@ -1,0 +1,19 @@
+//this 取決於當下使用的環境
+class Card {
+    constructor(initName) {
+        this.name = initName;
+    }
+
+    hello() {
+        console.log("hello",this.name);
+    }
+    //如果將這裡改成 hello = () =>{} 就能將this直接綁定
+}
+
+const c1 = new Card("buluese");
+c1.hello()
+
+//這裡結果會變成 hello aa 而不是 hello buluese
+const a = {name: "aa" };
+a.helloo = c1.hello
+a.helloo()
