@@ -15,3 +15,14 @@ console.log(a2);
 console.log(a3);
 console.log(a4);
 console.log(a5);
+
+
+//class為一種語法糖，為fuction外的另一種建立物件的方法
+//constructor搭配著class使用，一個class不能有兩個constructor
+// class Card {
+     constructor(initName) {
+         this.name = initName;
+     }
+ }
+ const c1 = new Card("buluese");
+ console.log
