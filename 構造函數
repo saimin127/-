@@ -26,3 +26,34 @@ console.log(a5);
  }
  const c1 = new Card("buluese");
  console.log
+ 
+ //class還能繼承能力
+class Car {
+  constructor(initName) {
+    this.name = initName;
+  }
+  start() {
+    console.log("車子啟動");
+  }
+}
+
+class Porshe extends Car {
+  constructor(namePorshe) {
+      //super是調用父層的內容使用
+    super(namePorshe);
+  }
+  start2() {
+    super.start();
+    console.log("設好路線");
+  }
+// 可以將上面繼承的star在這裡覆寫掉
+  start() {
+    super.start();
+    console.log("My Porshe啟動");
+  }
+}
+
+
+
+const p1 = new Porshe("我的保時捷");
+p1.start()
